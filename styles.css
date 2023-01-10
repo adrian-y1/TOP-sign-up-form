@@ -6,6 +6,8 @@
 :root {
     --btn-color: #596D48;
     --input-border-color: #e5e7eb;
+    --form-bg-color: #F9FAFB;
+    --form-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .container {
@@ -18,7 +20,6 @@
 /* ///// Sidebar \\\\\ */
 .sidebar {
     flex-basis: 50%;
-    background-color: red;
     position: relative;
 }
 .sidebar > img {
@@ -30,7 +31,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
     top: 200px;
     width: 100%;
@@ -49,6 +50,54 @@
 /* ///// Form \\\\\ */
 .form-container {
     flex-basis: 100%;
-    background-color: blue;
+    background-color: var(--form-bg-color);
+    display: flex;
+    flex-direction: column;
 }
-
+.form-description {
+    margin-top: 100px;
+    padding-left: 35px;
+}
+.form-description h3 {
+    font-size: 22px;
+}
+form {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.form-content {
+    background-color: #fff;
+    box-shadow: var(--form-box-shadow);
+    padding: 35px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.form-content h3 {
+    font-size: 22px;
+}
+fieldset {
+    width: 70%;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 0;
+}
+fieldset p {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+fieldset p label {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+fieldset p input {
+    width: 50%;
+}
+.submit {
+    padding-left: 35px;
+}
