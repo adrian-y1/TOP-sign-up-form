@@ -1,15 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 * {
     padding: 0;
     margin: 0;
+    font-family: Roboto;
 }
-
 :root {
     --btn-color: #596D48;
     --input-border-color: #e5e7eb;
     --form-bg-color: #F9FAFB;
     --form-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-
+@font-face {
+    font-family: Norse;
+    src: url(font/Norse-Bold.otf)
+}
 .container {
     display: flex;
     height: 100vh;
@@ -33,7 +37,7 @@
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
-    top: 200px;
+    top: 100px;
     width: 100%;
     padding: 20px 0 20px 0;
 }
@@ -41,6 +45,7 @@
     color: white;
     letter-spacing: 2px;
     font-size: 60px;
+    font-family: Norse;
 }
 .logo img {
     width: min(100px, 30%);
@@ -83,7 +88,7 @@ fieldset {
     border: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 0;
+    gap: 20px 0;
 }
 fieldset p {
     width: 50%;
@@ -91,13 +96,42 @@ fieldset p {
     flex-direction: column;
 }
 fieldset p label {
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 12px;
+    padding-bottom: 5px;
 }
 fieldset p input {
     width: 50%;
+    border: 1px solid var(--input-border-color);
+    padding: 7px 9px;
+    border-radius: 5px;
+    outline: none;
 }
+
 .submit {
     padding-left: 35px;
+}
+
+.submit button {
+    border-radius: 7px;
+    padding: 15px 45px;
+    margin-bottom: 30px;
+    color: white;
+    background-color: var(--btn-color);
+    border: none;
+    font-size: 17px;
+}
+.submit button:hover {
+    cursor: pointer;
+    background-color: #6a7c5b;
+}
+.submit a {
+    text-decoration: none;
+    color: var(--btn-color);
+    font-weight: 600;
+}
+.submit a:hover {
+    color: #6a7c5b;
+    text-decoration: underline;
 }
