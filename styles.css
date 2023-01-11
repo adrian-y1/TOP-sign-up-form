@@ -18,7 +18,6 @@
     display: flex;
     height: 100vh;
     background-color: green;
-    overflow: hidden;
 }
 
 /* ///// Sidebar \\\\\ */
@@ -35,7 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 100px;
     width: 100%;
@@ -48,8 +47,8 @@
     font-family: Norse;
 }
 .logo img {
-    width: min(100px, 30%);
-    height: min(100px, 30%);
+    width: 15%;
+    height: 15%;
 }
 .img-credits {
     position: absolute;
@@ -102,8 +101,14 @@ fieldset {
     flex-wrap: wrap;
     gap: 20px 0;
 }
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 100px;
+}
 fieldset p {
-    width: 50%;
+    width: 30%;
     display: flex;
     flex-direction: column;
 }
@@ -114,7 +119,7 @@ fieldset p label {
     padding-bottom: 5px;
 }
 fieldset p input {
-    width: 50%;
+    width: 90%;
     border: 1px solid var(--input-border-color);
     padding: 7px 9px;
     border-radius: 5px;
@@ -173,4 +178,64 @@ fieldset p input:focus {
 }
 .show-hide {
     display: block;
+}
+
+/* ///// Media Queries \\\\\ */
+@media screen and (max-width: 1400px) {
+    fieldset {
+        width: 80%;
+    }
+    fieldset p {
+        width: 35%;
+    }
+    .input-container {
+        gap: 70px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    fieldset {
+        width: 90%;
+    }
+    fieldset p {
+        width: 40%;
+    }
+    .input-container {
+        gap: 50px;
+    }
+    .form-description h3 {
+        font-size: 20px;
+    }
+    .logo img{
+        width: 20%;
+        height: 20%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        flex-basis: 100%;
+    }
+    .logo img{
+        width: 12%;
+        height: 12%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    fieldset {
+        width: 100%;
+    }
+    fieldset p {
+        width: 45%;
+    }
+    .input-container {
+        gap: 20px;
+    }
+    .form-description h3 {
+        font-size: 18px;
+    }
 }

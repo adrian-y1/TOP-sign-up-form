@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
-    <link rel="stylesheet" href="styles.css" stylesheet="styles.css">
-    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -36,34 +36,40 @@
           <div class="form-content">
             <div><h3>Let's do this!</h3></div>
             <fieldset>
-              <p>
-                <label for="fname">first name</label>
-                <input type="text" id="fname" required placeholder="John">
-              </p>
-              <p>
-                <label for="lname">last name</label>
-                <input type="text" id="lname" required placeholder="Smith">
-              </p>
-              <p>
-                <label for="email">email</label>
-                <input type="email" id="email" required placeholder="johnsmith@gmail.com">
-              </p>
-              <p>
-                <label for="number">phone number</label>
-                <input type="tel" id="number" class="telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required placeholder="123-456-7890">
-                <span class="tel-requirements">* Enter your US phone number. Format is 123-456-7890.</span>
-              </p>
-              <p>
-                <label for="password">password</label>
-                <input type="password" id="password" min="8" class="error" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" 
-                title="Password must be min 8 characters and must have an Uppercase, Lowercase and Number." required>
-                <span class="password-requirements">* Password must contain a uppercase, a lowercase, <br> &nbsp; a number and must be atleast 8 characters.</span>
-              </p>
-              <p>
-                <label for="confirm-pass">confirm password</label>
-                <input type="password" id="confirm-pass" class="error" required>
-                <span class="confirmation-error">* Passwords do not match.</span>
-              </p>
+              <div class="input-container">
+                <p>
+                  <label for="fname">first name</label>
+                  <input autofocus type="text" id="fname" required placeholder="John" autocomplete="off">
+                </p>
+                <p>
+                  <label for="lname">last name</label>
+                  <input type="text" id="lname" required placeholder="Smith" autocomplete="off">
+                </p>
+              </div>
+              <div class="input-container">
+                <p>
+                  <label for="email">email</label>
+                  <input type="email" id="email" required placeholder="johnsmith@gmail.com" autocomplete="off">
+                </p>
+                <p>
+                  <label for="number">phone number</label>
+                  <input type="tel" id="number" class="telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required placeholder="123-456-7890" autocomplete="off">
+                  <span class="tel-requirements">* Enter your US phone number. Format is 123-456-7890.</span>
+                </p>
+              </div>
+              <div class="input-container">
+                <p>
+                  <label for="password">password</label>
+                  <input type="password" id="password" min="8" class="error" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" 
+                  title="Password must be min 8 characters and must have an Uppercase, Lowercase and Number." required>
+                  <span class="password-requirements">* Password must contain a uppercase, a lowercase, <br> &nbsp; a number and must be atleast 8 characters.</span>
+                </p>
+                <p>
+                  <label for="confirm-pass">confirm password</label>
+                  <input type="password" id="confirm-pass" class="error" required>
+                  <span class="confirmation-error">* Passwords do not match.</span>
+                </p>
+              </div>
             </fieldset>
           </div>
 
