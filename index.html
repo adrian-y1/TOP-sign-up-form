@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="styles.css" stylesheet="styles.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -16,6 +17,9 @@
         <div class="logo">
           <img src="images/odin-logo.png" alt="The Odin Project Logo">
           <h2>ODIN</h2>
+        </div>
+        <div class="img-credits">
+          <span>Photo by <a target="_blank" href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a  target="_blank" href="https://unsplash.com/">Unsplash</a></span>
         </div>
       </section>
 
@@ -34,27 +38,31 @@
             <fieldset>
               <p>
                 <label for="fname">first name</label>
-                <input type="text" id="fname">
+                <input type="text" id="fname" required placeholder="John">
               </p>
               <p>
                 <label for="lname">last name</label>
-                <input type="text" id="lname">
+                <input type="text" id="lname" required placeholder="Smith">
               </p>
               <p>
                 <label for="email">email</label>
-                <input type="email" id="email">
+                <input type="email" id="email" required placeholder="johnsmith@gmail.com">
               </p>
               <p>
                 <label for="number">phone number</label>
-                <input type="tel" id="number">
+                <input type="tel" id="number" class="telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required placeholder="123-456-7890">
+                <span class="tel-requirements">* Enter your US phone number. Format is 123-456-7890.</span>
               </p>
               <p>
                 <label for="password">password</label>
-                <input type="password" id="password">
+                <input type="password" id="password" min="8" class="error" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" 
+                title="Password must be min 8 characters and must have an Uppercase, Lowercase and Number." required>
+                <span class="password-requirements">* Password must contain a uppercase, a lowercase, <br> &nbsp; a number and must be atleast 8 characters.</span>
               </p>
               <p>
                 <label for="confirm-pass">confirm password</label>
-                <input type="password" id="confirm-pass">
+                <input type="password" id="confirm-pass" class="error" required>
+                <span class="confirmation-error">* Passwords do not match.</span>
               </p>
             </fieldset>
           </div>

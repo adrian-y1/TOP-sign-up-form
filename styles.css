@@ -51,6 +51,18 @@
     width: min(100px, 30%);
     height: min(100px, 30%);
 }
+.img-credits {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    color: rgb(212, 212, 212);
+    font-size: 14px;
+}
+.img-credits a {
+    color: rgb(212, 212, 212);
+}
+
 
 /* ///// Form \\\\\ */
 .form-container {
@@ -96,7 +108,7 @@ fieldset p {
     flex-direction: column;
 }
 fieldset p label {
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 12px;
     padding-bottom: 5px;
@@ -107,12 +119,24 @@ fieldset p input {
     padding: 7px 9px;
     border-radius: 5px;
     outline: none;
+    display: block;
 }
-
+fieldset p input:focus {
+    border: 1px solid rgb(78, 78, 226);
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1);
+}
+.error:invalid, .telephone:invalid(:placeholder-shown) {
+    border: 1px solid rgb(219, 23, 23);
+}
+.error:invalid + .password-requirements, .telephone:invalid + .tel-requirements {
+    color: red;
+}
+.error:valid + .password-requirements, .telephone:valid + .tel-requirements {
+    color: rgb(29, 179, 29);
+}
 .submit {
     padding-left: 35px;
 }
-
 .submit button {
     border-radius: 7px;
     padding: 15px 45px;
@@ -134,4 +158,19 @@ fieldset p input {
 .submit a:hover {
     color: #6a7c5b;
     text-decoration: underline;
+}
+.password-requirements, .tel-requirements {
+    display: none;
+    margin-top: 5px;
+    font-size: 11px;
+    color: rgb(185, 181, 181);
+}
+.confirmation-error {
+    display: none;
+    color: red;
+    font-size: 11px;
+    margin-top: 5px;
+}
+.show-hide {
+    display: block;
 }
